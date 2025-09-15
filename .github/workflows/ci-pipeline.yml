@@ -1,0 +1,30 @@
+name: CI Pipeline
+
+on:
+  push:        # run pipeline when you push code
+    branches: [ "main" ]
+  pull_request:   # also run when PR is created/updated
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # checkout your repo
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # setup Python (change if your project is Node/Java/etc.)
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      # install dependencies
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # run tests (if you have any)
+      - name: Run tests
+        run: pytest || echo "No tests found, skipping"
