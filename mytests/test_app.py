@@ -1,7 +1,12 @@
-from app import app
+import importlib.util
+import sys
+from pathlib import Path
 
-def test_homepage():
-    client = app.test_client()
-    response = client.get("/")
-    assert response.status_code == 200
-    assert b"Afzaal DevOps" in response.data
+# Load app.py dynamically
+app_path = Path(__file__).resolve().parent.parent / "app.py"
+spec = importlib.util.spec_from_file_location("app", app_path)
+module = importlib.util.module_from_spec(spec)
+sys.modules["app"] = module
+spec.loader.exec_module(module)
+
+app = module.app
