@@ -1,5 +1,2 @@
-flask==3.0.2
-gunicorn==21.2.0       # For running Flask in production-like environment
-pytest==8.2.0          # For unit testing
-flake8==7.0.0          # For linting
-requests==2.32.3       # Common HTTP client
+flask
+pytest

@@ -1,6 +1,6 @@
-from flask import Flask, render_template_string
+from flask import Flask, render_teimplate_string
 
-app = Flask(__name__)
+app = Flask(__name__)n
 
 @app.route("/")
 def home():
@@ -9,7 +9,7 @@ def home():
     <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Afzaal DevOps - Flask Project</title>
+        <title>Afzaal DevOps & Ai infra Engineer - Flask Project</title>
         <style>
             body {
                 font-family: Arial, sans-serif;
@@ -75,7 +75,7 @@ def home():
         </nav>
 
         <div class="container">
-            <h1>Afzaal DevOps</h1>
+            <h1>Afzaal DevOps & Ai infra Engineer</h1>
             <p>
                 Today I explored Flask, a lightweight but powerful Python framework.
                 I learned how its structure works, what libraries developers commonly use, 
