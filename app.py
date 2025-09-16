@@ -1,6 +1,6 @@
 from flask import Flask, render_teimplate_string
 
-app = Flask(__name__)n
+app = Flask(__name__)
 
 @app.route("/")
 def home():
@@ -9,7 +9,7 @@ def home():
     <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Afzaal DevOps & Ai infra Engineer - Flask Project</title>
+        <title>Afzaal DevOps - Flask Project</title>
         <style>
             body {
                 font-family: Arial, sans-serif;
